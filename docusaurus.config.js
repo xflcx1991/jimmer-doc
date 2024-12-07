@@ -9,7 +9,7 @@ const config = {
   title: 'A revolutionary ORM framework for both java & kotlin',
   tagline: 'Not only ORM, but also a complete integrated solution',
   url: 'https://github.com',
-  baseUrl: '/jimmer-doc/',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: '//img/logo.png',
@@ -26,7 +26,7 @@ const config = {
     defaultLocale: 'en',
     locales: ['en', 'zh'],
   },
-  themes:[
+  themes: [
     [
       require.resolve("@easyops-cn/docusaurus-search-local"),
       {
@@ -47,7 +47,7 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: ({locale, versionDocsDirPath, docPath}) => {
+          editUrl: ({ locale, versionDocsDirPath, docPath }) => {
             if (locale == 'zh') {
               return `https://github.com/babyfish-ct/jimmer-doc/edit/main/i18n/zh/docusaurus-plugin-content-docs/current/${docPath}`
             }
@@ -69,7 +69,7 @@ const config = {
     ],
   ],
 
-  plugins:[
+  plugins: [
     [
       'content-docs',
       {
@@ -78,7 +78,7 @@ const config = {
         routeBasePath: 'faq',
         sidebarPath: require.resolve('./sidebars-faq.js'),
         showLastUpdateTime: true,
-        editUrl: ({locale, versionDocsDirPath, docPath}) => {
+        editUrl: ({ locale, versionDocsDirPath, docPath }) => {
           if (locale == 'zh') {
             return `https://github.com/babyfish-ct/jimmer-doc/edit/main/i18n/zh/docusaurus-plugin-content-faq/current/${docPath}`
           }
@@ -89,62 +89,62 @@ const config = {
   ],
 
   themeConfig:
-  /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-  ({
-    navbar: {
-      title: 'Jimmer documentation',
-      logo: {
-        alt: 'My Site Logo',
-        src: '//img/logo.png',
+    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+    ({
+      navbar: {
+        title: 'Jimmer documentation',
+        logo: {
+          alt: 'My Site Logo',
+          src: '//img/logo.png',
+        },
+        items: [
+          {
+            type: 'doc',
+            docId: 'overview/introduction',
+            position: 'left',
+            label: 'View more',
+          },
+          {
+            to: '/faq',
+            position: 'left',
+            label: 'FAQ',
+          },
+          {
+            type: 'localeDropdown',
+            position: 'left',
+          },
+          {
+            type: "search",
+            position: 'right'
+          },
+          {
+            href: 'https://github.com/babyfish-ct/jimmer',
+            label: 'GitHub',
+            position: 'right',
+          },
+        ],
       },
-      items: [
-        {
-          type: 'doc',
-          docId: 'overview/introduction',
-          position: 'left',
-          label: 'View more',
-        },
-        {
-          to: '/faq',
-          position: 'left',
-          label: 'FAQ',
-        },
-        {
-          type: 'localeDropdown',
-          position: 'left',
-        },
-        {
-          type: "search",
-          position: 'right'
-        },
-        {
-          href: 'https://github.com/babyfish-ct/jimmer',
-          label: 'GitHub',
-          position: 'right',
-        },
-      ],
-    },
-    footer: {
-      style: 'dark',
-      links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/overview/introduction',
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} jimmer, Inc.`,
-    },
-    prism: {
-      theme: lightCodeTheme,
-      darkTheme: darkCodeTheme,
-      additionalLanguages: ['java', 'kotlin', 'groovy', 'sql', 'cpp', 'kotlin', 'graphql', 'json', 'csharp'],
-    },
-  })
+      footer: {
+        style: 'dark',
+        links: [
+          {
+            title: 'Docs',
+            items: [
+              {
+                label: 'Tutorial',
+                to: '/docs/overview/introduction',
+              },
+            ],
+          },
+        ],
+        copyright: `Copyright © ${new Date().getFullYear()} jimmer, Inc.`,
+      },
+      prism: {
+        theme: lightCodeTheme,
+        darkTheme: darkCodeTheme,
+        additionalLanguages: ['java', 'kotlin', 'groovy', 'sql', 'cpp', 'kotlin', 'graphql', 'json', 'csharp'],
+      },
+    })
 };
 
 module.exports = config;
