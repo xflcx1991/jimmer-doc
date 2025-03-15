@@ -5,12 +5,13 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'A revolutionary ORM framework for both java & kotlin',
-  tagline: 'Not only ORM, but also a complete integrated solution',
+  title: 'Jimmer, the most advanced ORM of JVM',
+  tagline: 'Supports both java & kotlin',
   url: 'https://github.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenMarkdownLinks: 'throw',
+  onBrokenAnchors: 'throw',
   favicon: '/img/logo.png',
 
   // GitHub pages deployment config.
