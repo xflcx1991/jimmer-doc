@@ -8,11 +8,11 @@ const config = {
   title: 'Jimmer, the most advanced ORM of JVM',
   tagline: 'Supports both java & kotlin',
   url: 'https://github.com',
-  baseUrl: '/jimmer-doc/',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'throw',
   onBrokenAnchors: 'throw',
-  favicon: 'https://raw.githubusercontent.com/babyfish-ct/jimmer-doc/main/logo.png',
+  favicon: '/img/logo.png',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -95,7 +95,7 @@ const config = {
       title: 'Jimmer documentation',
       logo: {
         alt: 'My Site Logo',
-        src: 'https://raw.githubusercontent.com/babyfish-ct/jimmer-doc/main/logo.png',
+        src: '/img/logo.png',
       },
       items: [
         {
